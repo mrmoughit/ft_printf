@@ -6,7 +6,7 @@
 /*   By: abechcha <abechcha@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/22 16:43:55 by abechcha          #+#    #+#             */
-/*   Updated: 2023/11/22 16:46:20 by abechcha         ###   ########.fr       */
+/*   Updated: 2023/11/24 17:56:30 by abechcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,6 @@ int	ft_print_pointer(void *p)
 
 	r = 0;
 	r += ft_putstr("0x");
-	r += ft_print_low_hex((unsigned long long)p);
+	r += ft_print_adress((unsigned long long)p);
 	return (r);
 }

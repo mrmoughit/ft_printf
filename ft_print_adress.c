@@ -1,33 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_print_adress.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abechcha <abechcha@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/21 08:59:33 by abechcha          #+#    #+#             */
-/*   Updated: 2023/11/24 16:53:32 by abechcha         ###   ########.fr       */
+/*   Created: 2023/11/24 17:53:34 by abechcha          #+#    #+#             */
+/*   Updated: 2023/11/24 17:55:02 by abechcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putnbr(long n)
+int	ft_print_adress(unsigned long long n)
 {
-	int	r;
+	int		r;
+	char	*base;
 
 	r = 0;
-	if (n < 0)
+	base = "0123456789abcdef";
+	if (n >= 16)
 	{
-		n *= -1;
-		r += write(1, "-", 1);
-	}
-	if (n > 9)
-	{
-		r += ft_putnbr(n / 10);
-		r += ft_putchar((n % 10) + 48);
+		r += ft_print_adress(n / 16);
+		r += ft_print_adress(n % 16);
 	}
 	else
-		r += ft_putchar(n + 48);
+		r += ft_putchar(base[n]);
 	return (r);
 }

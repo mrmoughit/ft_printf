@@ -2,7 +2,7 @@ NAME = libftprintf.a
 
 CC = cc
 
-CFLAGS = -W -W -W
+CFLAGS = -Wall -Wextra -Werror
 
 SRC = ft_print_low_hex.c\
 	ft_print_pointer.c\
@@ -10,7 +10,8 @@ SRC = ft_print_low_hex.c\
 	ft_printf.c\
 	ft_putchar.c\
 	ft_putnbr.c\
-	ft_putstr.c
+	ft_putstr.c\
+	ft_print_adress.c
 
 OBG = ${SRC:.c=.o}
 

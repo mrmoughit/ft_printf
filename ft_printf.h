@@ -6,7 +6,7 @@
 /*   By: abechcha <abechcha@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 11:11:12 by abechcha          #+#    #+#             */
-/*   Updated: 2023/11/24 15:32:19 by abechcha         ###   ########.fr       */
+/*   Updated: 2023/11/24 17:55:54 by abechcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,10 @@
 # include <stdarg.h>
 # include <unistd.h>
 
+int	ft_print_adress(unsigned long long n);
 int	ft_putnbr(long nb);
 int	ft_print_upp_hex(unsigned int n);
-int	ft_print_low_hex(unsigned long long n);
+int	ft_print_low_hex(unsigned int n);
 int	ft_print_pointer(void *p);
 int	ft_printf(const char *format, ...);
 int	ft_putchar(int c);

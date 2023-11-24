@@ -6,13 +6,13 @@
 /*   By: abechcha <abechcha@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/22 16:38:11 by abechcha          #+#    #+#             */
-/*   Updated: 2023/11/22 16:43:35 by abechcha         ###   ########.fr       */
+/*   Updated: 2023/11/24 17:45:19 by abechcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_print_low_hex(unsigned long long n)
+int	ft_print_low_hex(unsigned int n)
 {
 	int		r;
 	char	*base;
